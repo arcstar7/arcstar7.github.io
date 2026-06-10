@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autonomous Accounts Payable · Steve Schorn Portfolio</title>
+  <meta name="description" content="Implementing generalized AI technologies and agentic workflows to solve real-world business problems and streamline daily operations for non-technical clients." />
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg-1:#0f1115; --bg-2:#141821; --text:#E6E7EE; --muted:#A9ADBE;
+      --brand:#4DA3FF; --card-border:#2A3447; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans";
+      background:
+        radial-gradient(1200px 800px at 30% -20%, #1a2233 0%, transparent 70%),
+        radial-gradient(1200px 800px at 90% -10%, #0e1c2f 0%, transparent 70%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar{width:12px}
+    ::-webkit-scrollbar-track{background:var(--bg-2)}
+    ::-webkit-scrollbar-thumb{background:#2a3447;border-radius:6px}
+    ::-webkit-scrollbar-thumb:hover{background:#3a4a67}
+    * {scrollbar-width:thin;scrollbar-color:#2a3447 var(--bg-2)}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 64px}
+
+    /* Top nav */
+    .topnav{margin:0 0 24px;display:flex;gap:18px;flex-wrap:wrap}
+    .topnav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:12px 20px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:16px;
+      font-weight:500;
+    }
+    .topnav a:hover{color:var(--text);border-color:#2a3447;background:rgba(255,255,255,.04)}
+    .topnav a.active{color:var(--text);border-color:#3a4a67;background:rgba(255,255,255,.06)}
+
+    /* Page header */
+    h1{margin:4px 0 8px;font-size:clamp(32px,4.5vw,44px);font-weight:800;letter-spacing:.2px}
+    .lead{color:var(--muted);margin:0 0 28px;font-size:clamp(17px,2.4vw,19px)}
+
+    /* Content area */
+    .content{
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid var(--card-border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:32px;
+      margin-top:16px;
+    }
+    .content h2{
+      font-size:28px;
+      font-weight:700;
+      margin:48px 0 20px 0;
+      color:var(--text);
+      padding-bottom:12px;
+      border-bottom:2px solid var(--card-border);
+    }
+    .content h2:first-of-type{margin-top:32px}
+    .content p{
+      color:var(--text);
+      font-size:16px;
+      line-height:1.7;
+      margin:0 0 16px 0;
+    }
+    .content strong{
+      color:var(--brand);
+      font-weight:600;
+    }
+
+    /* Intro block */
+    .intro-block{
+      margin:0 0 32px 0;
+      padding:24px;
+      background:rgba(77,163,255,.04);
+      border:1px solid var(--card-border);
+      border-radius:12px;
+    }
+    .intro-block p{
+      color:var(--muted);
+      font-size:17px;
+      margin:0 0 12px 0;
+      line-height:1.75;
+    }
+    .intro-block p:last-child{margin:0}
+
+    /* Step Section Cards */
+    .step-section{
+      margin:40px 0;
+      padding:24px;
+      background:rgba(77,163,255,.04);
+      border:1px solid var(--card-border);
+      border-radius:12px;
+    }
+    .step-section p{
+      color:var(--muted);
+      font-size:17px;
+      margin:0 0 16px 0;
+      line-height:1.75;
+    }
+    .step-section p:last-child{margin:0}
+    .step-section em{color:var(--text);font-style:italic}
+
+    /* Code Block Styling */
+    pre {
+      margin: 16px 0 !important;
+      border-radius: 8px !important;
+      border: 1px solid var(--card-border);
+    }
+
+    /* Footer */
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      padding-bottom:2px;
+      border-top:1px solid #232a3a;
+      color:var(--muted);
+      font-size:0.9rem;
+      background:linear-gradient(
+        to bottom,
+        rgba(20,24,33,0) 0%,
+        rgba(20,24,33,0.65) 100%
+      );
+      flex-shrink:0;
+    }
+    footer .links{
+      margin-top:6px;
+      gap:8px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    footer a{
+      color:var(--muted);
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    footer a:hover{
+      color:var(--brand);
+      text-decoration:none;
+    }
+
+    /* Back link */
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      color:var(--brand);
+      text-decoration:none;
+      font-size:15px;
+    }
+    .back-link:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <nav class="topnav" aria-label="Sections">
+      <a href="/SSPortfolio/">Home</a>
+      <a href="/SSPortfolio/Projects">Projects</a>
+      <a href="/SSPortfolio/IT%20Automation/">IT Automation</a>
+      <a href="/SSPortfolio/AI%20Solutions%20Strategy" class="active">AI Solutions & Strategy</a>
+      <a href="/SSPortfolio/Blogs">Blog</a>
+    </nav>
+
+    <header>
+      <h1>AI Solutions & Strategy</h1>
+      <p class="lead">Artificial intelligence is a foundational layer for business growth, not an isolated IT experiment.</p>
+    </header>
+
+    <main class="content">
+
+      <div class="intro-block">
+        <p>Traditional invoice processing is highly manual and prone to data entry errors. By integrating Generative AI and Machine Learning models with the ERP's financial modules, the system can automatically ingest invoices from emails or portals in various unstructured formats (PDFs, images).</p>
+        <p>AI extracts key-value pairs (vendor, amounts, tax, dates) and performs automated two-way or three-way matching against existing purchase orders and receipt logs in the ERP.</p>
+        <p>Exceptions or discrepancies are intelligently routed to human staff, while clean invoices are posted directly to the general ledger. This drastically reduces the invoice processing cycle from days to hours and virtually eliminates manual data entry.</p>
+      </div>
+
+      <h2>1. Extraction Engine</h2>
+      <div class="step-section">
+        <p>This is assuming the ERP is Dynamics 365. First, we need to initialize Azure AI Document Intelligence, specifically the pre-built Invoice model.</p>
+        <p>It is highly accurate for key-value extraction without needing to train a custom LLM.</p>
+<pre><code class="language-python">import os
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.formrecognizer import DocumentAnalysisClient
+
+def extract_invoice_data(invoice_file_path):
+    endpoint = os.environ["AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT"]
+    key = os.environ["AZURE_DOCUMENT_INTELLIGENCE_KEY"]
+
+    document_analysis_client = DocumentAnalysisClient(
+        endpoint=endpoint, credential=AzureKeyCredential(key)
+    )
+
+    with open(invoice_file_path, "rb") as f:
+        poller = document_analysis_client.begin_analyze_document(
+            "prebuilt-invoice", document=f
+        )
+    invoices = poller.result()
+    
+    extracted_data = {}
+    for idx, invoice in enumerate(invoices.documents):
+        fields = invoice.fields
+        extracted_data = {
+            "vendor_name": fields.get("VendorName").value if fields.get("VendorName") else None,
+            "invoice_date": fields.get("InvoiceDate").value if fields.get("InvoiceDate") else None,
+            "invoice_total": fields.get("InvoiceTotal").value.amount if fields.get("InvoiceTotal") else 0.0,
+            "total_tax": fields.get("TotalTax").value.amount if fields.get("TotalTax") else 0.0,
+            "purchase_order": fields.get("PurchaseOrder").value if fields.get("PurchaseOrder") else None,
+            "line_items": []
+        }
+        
+        # Extracting line items for 3-way matching
+        if fields.get("Items"):
+            for item in fields.get("Items").value:
+                item_fields = item.value
+                extracted_data["line_items"].append({
+                    "description": item_fields.get("Description").value if item_fields.get("Description") else "",
+                    "quantity": item_fields.get("Quantity").value if item_fields.get("Quantity") else 0.0,
+                    "unit_price": item_fields.get("UnitPrice").value.amount if item_fields.get("UnitPrice") else 0.0
+                })
+                
+    return extracted_data</code></pre>
+      </div>
+
+      <h2>2. Querying D365</h2>
+      <div class="step-section">
+        <p>To perform the match, you need to pull the existing Purchase Order (PO) and Product Receipt data from D365 Finance & Operations (F&O). You will use Microsoft Authentication Library (MSAL) and the D365 OData endpoints.</p>
+<pre><code class="language-python">import requests
+import msal
+
+def get_d365_token(client_id, client_secret, tenant_id):
+    authority = f"https://login.microsoftonline.com/{tenant_id}"
+    app = msal.ConfidentialClientApplication(
+        client_id, authority=authority, client_credential=client_secret
+    )
+    
+    # The scope is your D365 F&O URL + /.default
+    result = app.acquire_token_for_client(scopes=["https://your-d365-env.operations.dynamics.com/.default"])
+    return result['access_token']
+
+def get_d365_po_data(po_number, token):
+    d365_url = f"https://your-d365-env.operations.dynamics.com/data/PurchaseOrderLines?$filter=PurchaseOrderNumber eq '{po_number}'"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+    
+    response = requests.get(d365_url, headers=headers)
+    return response.json().get('value', [])</code></pre>
+      </div>
+
+      <h2>3. Matching Logic</h2>
+      <div class="step-section">
+        <p>Two-way matching checks if the Invoice matches the PO. Three-way matching checks if the Invoice matches the PO and the physically received goods (Receipt Log). You must implement a tolerance threshold (e.g., a 1% variance or a flat $5.00 limit) because tax rounding and shipping fees frequently cause exact matches to fail.</p>
+<pre><code class="language-python">def perform_matching(invoice_data, po_lines, receipt_lines=None, match_type="3-way", tolerance=0.01):
+    match_results = {
+        "status": "Pending",
+        "discrepancies": []
+    }
+    
+    if not po_lines:
+        match_results["status"] = "Failed"
+        match_results["discrepancies"].append("Purchase Order not found in D365.")
+        return match_results
+
+    # Aggregate PO totals
+    po_total = sum([line['LineAmount'] for line in po_lines])
+    
+    # 2-WAY MATCHING (Invoice vs PO)
+    invoice_total = invoice_data['invoice_total']
+    if abs(invoice_total - po_total) / max(po_total, 1) &gt; tolerance:
+        match_results["discrepancies"].append(f"Price mismatch: Invoice Total ({invoice_total}) vs PO Total ({po_total})")
+        
+    # 3-WAY MATCHING (Invoice vs PO vs Receipt)
+    if match_type == "3-way":
+        if not receipt_lines:
+             match_results["discrepancies"].append("No product receipts found for this PO.")
+        else:
+            # Simplified logic: compare total quantities
+            invoice_qty = sum([item['quantity'] for item in invoice_data['line_items']])
+            receipt_qty = sum([line['ReceivedQuantity'] for line in receipt_lines])
+            
+            if invoice_qty &gt; receipt_qty:
+                match_results["discrepancies"].append(f"Quantity mismatch: Invoiced ({invoice_qty}) but Received ({receipt_qty})")
+
+    # Determine final status
+    if len(match_results["discrepancies"]) == 0:
+        match_results["status"] = "Approved"
+    else:
+        match_results["status"] = "Exceptions Found"
+        
+    return match_results</code></pre>
+      </div>
+
+      <h2>4. Wrapping It Up</h2>
+      <div class="step-section">
+        <p>In a production environment, this Python logic would sit in a middleware layer (like an Azure Function or an AWS Lambda). The pipeline looks like this:</p>
+<pre><code class="language-plaintext">1. Invoice arrives in an email inbox.
+2. An orchestrator grabs the PDF and sends it to the AI Extraction Code.
+3. The extracted PO number is passed to the D365 API to pull the PO and Receipt data.
+4. The Matching Code compares the two.
+5. If Approved, an API call creates an AP Invoice journal in D365. If Exceptions Found, it alerts a human accountant.</code></pre>
+      </div>
+
+      <a class="back-link" href="../index.html">← Back to Home</a>
+
+    </main>
+
+    <footer>
+      <div>Steve Schorn · SSPortfolio</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/stevenschorn88/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

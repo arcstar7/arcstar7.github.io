@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Solutions & Strategy· Steve Schorn Portfolio</title>
+  <meta name="description" content="Implementing generalized AI technologies and agentic workflows to solve real-world business problems and streamline daily operations for non-technical clients." />
+  <style>
+    :root{
+      --bg-1:#0f1115; --bg-2:#141821; --text:#E6E7EE; --muted:#A9ADBE;
+      --brand:#4DA3FF; --card-border:#2A3447; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans";
+      background:
+        radial-gradient(1200px 800px at 30% -20%, #1a2233 0%, transparent 70%),
+        radial-gradient(1200px 800px at 90% -10%, #0e1c2f 0%, transparent 70%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 64px}
+
+    /* Top nav */
+    .topnav{margin:0 0 24px;display:flex;gap:18px;flex-wrap:wrap}
+    .topnav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:12px 20px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:16px;
+      font-weight:500;
+    }
+    .topnav a:hover{color:var(--text);border-color:#2a3447;background:rgba(255,255,255,.04)}
+    .topnav a.active{color:var(--text);border-color:#3a4a67;background:rgba(255,255,255,.06)}
+
+    /* Title & intro */
+    h1{margin:4px 0 8px;font-size:clamp(32px,4.5vw,44px);font-weight:800;letter-spacing:.2px}
+    .lead{color:var(--muted);margin:0 0 36px;font-size:clamp(17px,2.4vw,19px)}
+
+    /* Section tiles */
+    .sections{display:flex;flex-direction:column;gap:24px;margin-top:16px}
+
+    .section-tile{
+      border-radius:var(--radius);
+      border:1px solid var(--card-border);
+      box-shadow:var(--shadow);
+      padding:28px;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+    }
+
+    .section-header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:20px;
+      padding-bottom:16px;
+      border-bottom:1px solid var(--card-border);
+    }
+    .section-icon{font-size:22px;line-height:1}
+    .section-title{
+      margin:0;
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:.1px;
+      color:var(--text);
+    }
+    .section-count{
+      margin-left:auto;
+      font-size:13px;
+      color:var(--muted);
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--card-border);
+      border-radius:20px;
+      padding:3px 12px;
+    }
+
+    /* Inner card grid */
+    .labs-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+    @media(max-width:720px){.labs-grid{grid-template-columns:1fr}}
+
+    .lab-card{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid var(--card-border);
+      border-radius:14px;
+      padding:20px 22px;
+      transition:transform .18s,border-color .18s,box-shadow .18s;
+    }
+    .lab-card:hover{transform:translateY(-3px);border-color:#3a4a67;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+
+    .lab-name{font-weight:700;font-size:17px;margin:0 0 6px}
+    .lab-desc{color:var(--muted);font-size:14px;margin:0;line-height:1.6}
+
+    /* Footer */
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      padding-bottom:2px;
+      border-top:1px solid #232a3a;
+      color:var(--muted);
+      font-size:0.9rem;
+      background:linear-gradient(
+        to bottom,
+        rgba(20,24,33,0) 0%,
+        rgba(20,24,33,0.65) 100%
+      );
+      flex-shrink:0;
+    }
+    footer .links{
+      margin-top:6px;
+      gap:8px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    footer a{color:var(--muted);text-decoration:none;white-space:nowrap}
+    footer a:hover{color:var(--brand);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Site nav -->
+    <nav class="topnav" aria-label="Sections">
+      <a href="/SSPortfolio/">Home</a>
+      <a href="/SSPortfolio/Projects">Projects</a>
+      <a href="/SSPortfolio/IT%20Automation/">IT Automation</a>
+      <a href="/SSPortfolio/AI%20Solutions%20Strategy" class="active">AI Solutions & Strategy</a>
+      <a href="/SSPortfolio/Blogs">Blog</a>
+    </nav>
+
+    <!-- Page header -->
+    <header>
+      <h1>AI Solutions & Strategy</h1>
+      <p class="lead">Artificial intelligence is a foundational layer for business growth, not an isolated IT experiment.
+	  A successful AI strategy bridges the gap between cutting-edge generalized AI capabilities and the practical realities of enterprise infrastructure. 
+	  The core focus is on outcome-driven automation—ensuring that technology serves the business through clear metrics, enhanced security, and seamless workflow integration.</p>
+      <p class="lead">AI tools must interface cleanly with existing Enterprise Resource Planning (ERP) systems, legacy hardware, and established operations. 
+	  Whether automating complex forecasting or deploying hardware telemetry monitoring, implementation prioritizes stability, ensuring new capabilities enhance rather than disrupt daily workflows.</p>
+      <p class="lead">Strategic implementation means reducing platform bloat, not adding to it. 
+	  By emphasizing system consolidation, strict infrastructure management, and robust vendor accountability, AI rollouts remain manageable, auditable, and cost-effective. </p>
+      
+    </header>
+
+    <main class="sections">
+
+      <!-- Cyber Defense Labs -->
+      <section class="section-tile">
+        <div class="section-header">
+          <span class="section-icon">💻</span>
+          <h2 class="section-title">AI Solutions & Strategy</h2>
+          <span class="section-count">4 Pages</span>
+        </div>
+        <div class="labs-grid">
+          <a class="lab-card" href="AI%20Solutions%20Strategy/Autonomous%20Accounts%20Payable/">
+            <div class="lab-name">Autonomous Accounts Payable (Finance)</div>
+            <p class="lab-desc">Traditional invoice processing is highly manual and prone to data entry errors. 
+			By integrating Generative AI and Machine Learning models with the ERP's financial modules, the system can automatically ingest invoices from emails or portals in various unstructured formats (PDFs, images).</p>
+          </a>
+          <a class="lab-card" href="AI%20Solutions%20Strategy/Predictive%20Inventory/">
+            <div class="lab-name">Predictive Inventory & Supply Chain Orchestration</div>
+            <p class="lab-desc">Standard ERP inventory modules rely on static minimum-stock thresholds. 
+			AI solutions replace this with dynamic forecasting by analyzing historical ERP data (sales, seasonality) alongside external data streams (economic indicators, weather patterns, or social trends).  </p>
+          </a>
+          <a class="lab-card" href="AI%20Solutions%20Strategy/Predictive%20Inventory">
+            <div class="lab-name">IoT-Driven Predictive Maintenance (Manufacturing & Operations)</div>
+            <p class="lab-desc">In asset-heavy industries, waiting for equipment to break down causes severe production delays. AI bridges the gap between the factory floor and the ERP's asset management modules.</p>
+          </a>
+          <a class="lab-card" href="AI%20Solutions%20Strategy/Anomaly%20Detection">
+            <div class="lab-name">Automated Anomaly Detection and Compliance</div>
+            <p class="lab-desc">Identifying fraud, duplicate payments, or compliance violations manually across millions of ERP transactions is nearly impossible.</p>
+          </a>
+        </div>
+      </section><br>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>Steve Schorn · SSPortfolio</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/stevenschorn88/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
