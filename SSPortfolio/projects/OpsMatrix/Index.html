@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Solutions & Strategy · Steve Schorn Portfolio</title>
+  <meta name="description" content="Implementing generalized AI technologies and agentic workflows to solve real-world business problems and streamline daily operations for non-technical clients." />
+  <style>
+    :root {
+      --bg-1: #0f1115; 
+      --bg-2: #141821; 
+      --text: #E6E7EE; 
+      --muted: #A9ADBE;
+      --brand: #4DA3FF; 
+      --card-border: #2A3447; 
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; 
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+      background:
+        radial-gradient(1200px 800px at 30% -20%, #1a2233 0%, transparent 70%),
+        radial-gradient(1200px 800px at 90% -10%, #0e1c2f 0%, transparent 70%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      line-height: 1.65; 
+      -webkit-font-smoothing: antialiased; 
+      text-rendering: optimizeLegibility;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 64px; }
+
+    /* Top nav */
+    .topnav { margin: 0 0 40px; display: flex; gap: 18px; flex-wrap: wrap; }
+    .topnav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+    }
+    .topnav a:hover { color: var(--text); border-color: #2a3447; background: rgba(255,255,255,.04); }
+    .topnav a.active { color: var(--text); border-color: #3a4a67; background: rgba(255,255,255,.06); }
+
+    /* Title & intro */
+    h1 { margin: 4px 0 24px; font-size: clamp(36px, 5vw, 52px); font-weight: 800; letter-spacing: .2px; }
+    
+    .content-section {
+      color: var(--muted);
+      font-size: clamp(17px, 2.4vw, 19px);
+      margin-bottom: 36px;
+    }
+
+    /* Clearfix to ensure container fully wraps floating elements */
+    .content-section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .content-section p {
+      margin-bottom: 1.5em;
+    }
+
+    /* Floating Image Styling */
+    .feature-figure {
+      margin: 10px 0 20px;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.45);
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      padding: 12px;
+      max-width: 40%; /* Shrinks the image to allow text wrapping */
+      box-sizing: border-box;
+    }
+
+    .feature-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .float-right {
+      float: right;
+      margin-left: 32px;
+    }
+
+    .float-left {
+      float: left;
+      margin-right: 32px;
+    }
+
+    .image-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 12px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* Responsive adjustments for mobile screens */
+    @media (max-width: 800px) {
+      .feature-figure {
+        float: none;
+        max-width: 100%;
+        margin: 32px auto;
+      }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      padding-bottom: 2px;
+      border-top: 1px solid #232a3a;
+      color: var(--muted);
+      font-size: 0.9rem;
+      background: linear-gradient(
+        to bottom,
+        rgba(20,24,33,0) 0%,
+        rgba(20,24,33,0.65) 100%
+      );
+      flex-shrink: 0;
+    }
+    footer .links {
+      margin-top: 6px;
+      gap: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    footer a { color: var(--muted); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+    footer a:hover { color: var(--brand); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Site nav -->
+    <nav class="topnav" aria-label="Sections">
+      <a href="https://arcstar7.github.io/index.html">Home</a>
+      <a href="/SSPortfolio/Projects">Projects</a>
+      <a href="https://arcstar7.github.io/SSPortfolio/it-automation/">IT Automation</a>
+      <a href="https://arcstar7.github.io/SSPortfolio/ai-solutions-strategy/">AI Solutions & Strategy</a>
+      <a href="/SSPortfolio/Blogs">Blog</a>
+    </nav>
+
+    <!-- Page header -->
+    <header>
+      <h1>Ops Matrix</h1>
+      
+      <div class="content-section">
+        
+        <figure class="feature-figure float-right">
+          <img src="opsmatrix-scanning.png" alt="Ops Matrix Scanning Interface" />
+          <figcaption class="image-caption">Comprehensive diagnostic scanning of organizational data streams.</figcaption>
+        </figure>
+
+        <p>OpsMatrix was born from a simple observation: most businesses are sitting on hidden operational problems they don't know exist. Throughout my career working with ERP systems, manufacturing operations, supply chains, and enterprise IT environments, I repeatedly encountered the same pattern. Companies invest millions of dollars in software, processes, and infrastructure, yet critical inefficiencies remain buried beneath the surface. Inventory discrepancies, pricing errors, procurement waste, process bottlenecks, duplicate transactions, data quality issues, and workflow breakdowns quietly drain profitability every day.</p>
+
+        <p>The challenge is not that organizations lack data. In fact, most businesses have more data than ever before. The real problem is that the data is spread across ERP systems, databases, spreadsheets, and disconnected applications, making it nearly impossible for leadership teams to identify where the biggest opportunities for improvement exist. Valuable operational insights remain hidden inside thousands of transactions, records, and system configurations.</p>
+
+        <figure class="feature-figure float-left">
+          <img src="opsmatrix-scanfindings.png" alt="Ops Matrix Scan Findings and Risk Scoring" />
+          <figcaption class="image-caption">Translating raw data into prioritized, actionable business insights.</figcaption>
+        </figure>
+
+        <p>OpsMatrix was created to solve this problem. It is an operational intelligence platform that connects directly to a company's ERP and business systems to perform a comprehensive diagnostic scan of the organization. Rather than producing generic reports or dashboards, OpsMatrix analyzes business processes, identifies operational waste, uncovers hidden risks, and translates findings into prioritized, actionable recommendations. The platform helps organizations understand not only what is wrong, but also the financial impact of each issue and where they should focus first.</p>
+
+        <p>The vision behind OpsMatrix is to provide businesses with the equivalent of an MRI for their operations. Just as medical imaging reveals problems that cannot be seen from the outside, OpsMatrix exposes inefficiencies that traditional reporting often misses. Whether it's excess inventory, revenue leakage, supplier risks, procurement inefficiencies, order fulfillment delays, or process breakdowns, the platform helps organizations uncover the root causes of operational drag before they become larger business problems.</p>
+
+        <p>Ultimately, OpsMatrix exists to help companies make better decisions, improve profitability, and operate more efficiently. By transforming complex operational data into clear business insights, the platform empowers leadership teams to move beyond intuition and make improvements based on measurable facts. The goal is simple: help businesses eliminate operational waste, increase performance, and unlock value that already exists within their organization.</p>
+
+        <figure class="feature-figure float-right">
+          <img src="opsmatrix-technical.png" alt="Ops Matrix Technical Blueprint for Dynamics 365 Business Central" />
+          <figcaption class="image-caption">Technical blueprint and integration workflow for Dynamics 365 Business Central.</figcaption>
+        </figure>
+
+        <p>The technical foundation of OpsMatrix began with a library of advanced SQL-based diagnostic scans designed to analyze ERP databases directly. The original vision was to identify operational inefficiencies, process bottlenecks, data quality issues, and revenue leakage by querying transactional and master data stored within an organization's ERP system. While this approach proved highly effective, it quickly became clear that a one-size-fits-all solution would not adequately address the differences in data structures, customization models, and security requirements across modern ERP platforms.</p>
+
+        <p>To support Microsoft Dynamics 365 Business Central, OpsMatrix has evolved beyond direct database analysis by leveraging Microsoft's AL development framework. Rather than relying solely on SQL access, custom AL extensions are used to expose and collect operational data in a way that aligns with Business Central's cloud-first architecture and security model. This allows diagnostic logic to operate within the application layer, making the platform more scalable, maintainable, and compatible with both cloud and on-premises deployments. By combining AL-based data collection with external analytics and reporting capabilities, OpsMatrix can deliver the same deep operational insights while respecting the design principles of the modern Dynamics ecosystem.</p>
+
+        <p>Looking forward, the long-term strategy is to develop native integration frameworks for other major ERP platforms using the technologies and development methodologies most appropriate for each environment. For SAP environments, this may include leveraging SAP HANA views, APIs, and extension frameworks; for Oracle ERP platforms, Oracle Cloud APIs and database services; for Infor, the Infor OS and associated integration technologies; and for Sage, platform-specific APIs and extensibility tools. Rather than forcing every customer into a single integration model, OpsMatrix is being designed as a flexible diagnostic platform that adapts to the architecture of each ERP system while maintaining a consistent set of operational intelligence capabilities. This approach enables organizations to gain meaningful insights from their business data regardless of the ERP platform they have chosen.</p>
+		
+		<p>We currently have the D365 AL code repository as private, but you can check out the SQL scripts that we are using as the foundation for this application.</p>
+		<a href="https://github.com/arcstar7/OpsMatrix-Dynamics" target="_blank" rel="noopener noreferrer">Check out the repository here</a>
+		
+      </div>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+      <div>Steve Schorn · SSPortfolio</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/stevenschorn88/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://medium.com/@schorns" target="_blank" rel="noopener">Medium</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
