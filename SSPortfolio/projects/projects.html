@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects · Steve Schorn Portfolio</title>
+  <meta name="description" content="ERP development, IT Automation, custom scripting, and deploying <b>generalized AI technologies</b> to help businesses optimize their workflows." />
+  <style>
+    :root{
+      --bg-1:#0f1115; --bg-2:#141821; --text:#E6E7EE; --muted:#A9ADBE;
+      --brand:#4DA3FF; --card-border:#2A3447; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans";
+      background:
+        radial-gradient(1200px 800px at 30% -20%, #1a2233 0%, transparent 70%),
+        radial-gradient(1200px 800px at 90% -10%, #0e1c2f 0%, transparent 70%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 64px}
+
+    /* Top nav - INCREASED SIZE */
+    .topnav{margin:0 0 24px;display:flex;gap:18px;flex-wrap:wrap}
+    .topnav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:12px 20px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:16px;
+      font-weight:500;
+    }
+    .topnav a:hover{color:var(--text);border-color:#2a3447;background:rgba(255,255,255,.04)}
+    .topnav a.active{color:var(--text);border-color:#3a4a67;background:rgba(255,255,255,.06)}
+
+    /* Title & intro */
+    h1{margin:4px 0 8px;font-size:clamp(32px,4.5vw,44px);font-weight:800;letter-spacing:.2px}
+    .lead{color:var(--muted);margin:0 0 28px;font-size:clamp(17px,2.4vw,19px)}
+
+    /* Section titles - INCREASED SIZE */
+    h2{margin:36px 0 20px;font-size:clamp(24px,3.2vw,30px);font-weight:700}
+
+    /* Cards grid - INCREASED SIZE */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    
+    /* Updated Card Styles for Blog Layout */
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid var(--card-border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      transition:transform .18s,border-color .18s,box-shadow .18s;
+      overflow: hidden; /* Keeps the top image corners rounded */
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover{transform:translateY(-3px);border-color:#3a4a67;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+    .card a{
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+      color:var(--text);
+      text-decoration:none;
+    }
+    
+    /* New Image & Content Wrapper Styles */
+    .card-img {
+      width: 100%;
+      height: 220px; /* Adjust this height if you want taller/shorter images */
+      object-fit: cover; /* Ensures images fill the area without distortion */
+      display: block;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .card-content {
+      padding: 26px;
+      flex-grow: 1;
+    }
+
+    .item-title{font-weight:700;font-size:20px;margin:0 0 8px}
+    .item-desc{color:var(--muted);font-size:15px;margin:0;line-height:1.6}
+
+    /* Footer - MATCHING MAIN PAGE */
+    footer{
+      margin-top:48px;
+      padding-top:24px;
+      padding-bottom:2px;
+      border-top:1px solid #232a3a;
+      color:var(--muted);
+      font-size:0.9rem;
+      background:linear-gradient(
+        to bottom,
+        rgba(20,24,33,0) 0%,
+        rgba(20,24,33,0.65) 100%
+      );
+      flex-shrink:0;
+    }
+    footer .links{
+      margin-top:6px;
+      gap:8px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    footer a{
+      color:var(--muted);
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    footer a:hover{
+      color:var(--brand);
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <nav class="topnav" aria-label="Sections">
+      <a href="/SSPortfolio/">Home</a>
+      <a href="/SSPortfolio/Projects" class="active">Projects</a>
+      <a href="/SSPortfolio/IT%20Automation/">IT Automation</a>
+      <a href="/SSPortfolio/AI%20Solutions%20Strategy">AI Solutions & Strategy</a>
+      <a href="/SSPortfolio/Blogs">Blog</a>
+    </nav>
+
+    <header>
+      <h1>Projects</h1>
+      <p class="lead">Various projects I've worked on and developed.</p>
+    </header>
+
+    <h2>ERP</h2>
+    <div class="grid">
+      <article class="card">
+        <a href="https://github.com/arcstar7/OpsMatrix-Dynamics">
+		<img src="https://raw.githubusercontent.com/arcstar7/arcstar7.github.io/main/Images/Landscape-OpsMatrix224.png" alt="Ops Matrix Dashboard" class="card-img" loading="lazy" />
+          <div class="card-content">
+            <div class="item-title">Ops Matrix</div>
+            <p class="item-desc">OpsMatrix is a specialized ERP auditing tool engineered to identify, track, and assess revenue leakage. Designed for enterprise environments, it provides robust analysis capabilities to ensure data integrity, optimize financial accuracy, and streamline auditing workflows.</p>
+          </div>
+        </a>
+      </article>
+      
+      <article class="card">
+        <a href="https://github.com/arcstar7/OpsSense">
+		<img src="https://raw.githubusercontent.com/arcstar7/arcstar7.github.io/main/Images/Landscape-OpsSense224.png" alt="Ops Sense Monitoring" class="card-img" loading="lazy" />
+          <div class="card-content">
+            <div class="item-title">Ops Sense</div>
+            <p class="item-desc">Monitoring of legacy plant floor equipment using sensors. Mosquitto. Predictive maintenance.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="https://github.com/arcstar7/Sage-GQL-PBI">
+		<img src="https://raw.githubusercontent.com/arcstar7/arcstar7.github.io/main/Images/Landscape-SageX3-GraphQL224.png" alt="Sage X3 GraphQL Architecture" class="card-img" loading="lazy" />			
+          <div class="card-content">
+            <div class="item-title">Sage X3 GraphQL Data Extraction</div>
+            <p class="item-desc">Data pipeline designed to incrementally extract General Ledger (GL) transactions (or other data) from Sage X3 via its GraphQL API and stage into a MSSQL database for easier access to build Power BI reports.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <footer>
+      <div>Steve Schorn · SSPortfolio</div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/stevenschorn88/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

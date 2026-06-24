@@ -22,6 +22,7 @@
   --radius:20px;
 }
 
+/* Base scale - optimized for filling screen */
 html{
   font-size:125%;
 }
@@ -52,20 +53,22 @@ body{
 }
 
 /* =========================================================
-   TOP NAVIGATION
+   LOGO (DESKTOP ONLY)
    ========================================================= */
-.topnav{margin:0 0 24px;display:flex;gap:18px;flex-wrap:wrap}
-.topnav a{
-  color:var(--muted);
-  text-decoration:none;
-  padding:12px 20px;
-  border-radius:12px;
-  border:1px solid transparent;
-  font-size:16px;
-  font-weight:500;
+.logo-top-left{
+  position:fixed;
+  top:18px;
+  left:24px;
+  width:180px;
+  z-index:1000;
+  transition:transform .2s ease;
 }
-.topnav a:hover{color:var(--text);border-color:#2a3447;background:rgba(255,255,255,.04)}
-.topnav a.active{color:var(--text);border-color:#3a4a67;background:rgba(255,255,255,.06)}
+.logo-top-left:hover{
+  transform:scale(1.05);
+}
+@media (max-width:900px){
+  .logo-top-left{display:none}
+}
 
 /* =========================================================
    WRAPPER (OPTIMIZED FOR NO SCROLL)
@@ -107,6 +110,7 @@ header{
   }
 }
 
+/* Avatar */
 .avatar{
   width:140px;
   height:140px;
@@ -124,6 +128,7 @@ header{
   }
 }
 
+/* Titles */
 .title{
   margin:0 0 8px;
   font-size:clamp(2.3rem,4.6vw,2.9rem);
@@ -135,6 +140,7 @@ header{
   color:var(--muted);
 }
 
+/* Intro */
 .intro{
   margin:12px 0 18px;
   font-size:1.06rem;
@@ -153,7 +159,7 @@ header{
 }
 
 /* =========================================================
-   LINKS
+   LINKS (IMPROVED RESPONSIVE BEHAVIOR)
    ========================================================= */
 .links{
   display:flex;
@@ -365,7 +371,7 @@ footer a:hover{
 </head>
 
 <body>
-  <div class="wrap">
+    <div class="wrap">
     <nav class="topnav" aria-label="Sections">
       <a href="/SSPortfolio/">Home</a>
       <a href="/SSPortfolio/Projects">Projects</a>
@@ -374,81 +380,85 @@ footer a:hover{
       <a href="/SSPortfolio/Blogs">Blog</a>
     </nav>
 
-    <header>
-      <div class="avatar" aria-label="Photo of Steve Schorn"></div>
-      <div>
-        <h1 class="title">IT Automation Projects</h1>
-        <div class="brand-tag">SSPortfolio · Scripts · Infrastructure · Tooling</div>
+<img src="Images/SSPortfolioLogo.png" alt="SSPortfolio Logo" class="logo-top-left" />
 
-        <p class="intro">
-          I'm <b>Steve</b>, an IT Manager, Developer and professional consultant focused on modernizing IT operations and integrating diverse technology solutions. 
-          This page highlights my automated tooling, utilizing Python and PowerShell to streamline operations, enforce compliance, and optimize hardware deployments.
-        </p>
+<div class="wrap">
 
-        <nav class="links" aria-label="Quick links">
-          <a class="link-pill" href="https://arcstar7.github.io/SSPortfolio/" target="_self">
-            <span>← Back to Main Portfolio</span>
-          </a>
-          <a class="link-pill" href="https://github.com/arcstar7" target="_blank" rel="noopener">
-            <span>GitHub</span>
-            <small>github.com/arcstar7</small>
-          </a>
-        </nav>
-      </div>
-    </header>
+<header>
+  <div class="avatar" aria-label="Photo of Steve Schorn"></div>
+  <div>
+    <h1 class="title">IT Automation Projects</h1>
+    <div class="brand-tag">SSPortfolio · Scripts · Infrastructure · Tooling</div>
 
-    <section class="sections" aria-label="Repository sections">
+    <p class="intro">
+I'm <b>Steve</b>, an IT Manager, Developer and professional consultant focused on modernizing IT operations and integrating diverse technology solutions. 
+This page highlights my automated tooling, utilizing Python and PowerShell to streamline operations, enforce compliance, and optimize hardware deployments.
+    </p>
 
-      <article class="card">
-        <a href="https://github.com/arcstar7/VLAN-Audit" target="_blank" rel="noopener">
-          <div class="card-title">VLAN-Audit</div>
-          <div class="card-desc">
-            Automated scripts designed to audit and map VLAN configurations across network infrastructure, ensuring proper segmentation and deployment compliance.
-          </div>
-          <div class="card-cta">View Repository →</div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/arcstar7/AzureResourceCleaner" target="_blank" rel="noopener">
-          <div class="card-title">Azure Resource Cleaner</div>
-          <div class="card-desc">
-            Configuration and management tooling designed to streamline the deployment, updates, and resilient operation of autonomous wireless access points.
-          </div>
-          <div class="card-cta">View Repository →</div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/arcstar7/DBA-SQL-Perfmon" target="_blank" rel="noopener">
-          <div class="card-title">SQL Monitoring</div>
-          <div class="card-desc">
-           PowerShell-based orchestrator that deploys industry-standard database maintenance routines, verifies backup integrity, and routes critical alerts directly to Microsoft Teams.
-          </div>
-          <div class="card-cta">View Repository →</div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="https://github.com/arcstar7/DBA-SQL-Perfmon" target="_blank" rel="noopener">
-          <div class="card-title">Project Name 4</div>
-          <div class="card-desc">
-            Placeholder description for your next automation repository. Update this text to highlight the problem your script or tool solves.
-          </div>
-          <div class="card-cta">View Repository →</div>
-        </a>
-      </article>
-
-    </section>
-
-    <footer>
-      <div>Steve Schorn · SSPortfolio</div>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/stevenschorn88" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </footer>
-
+    <nav class="links" aria-label="Quick links">
+      <a class="link-pill" href="https://arcstar7.github.io/SSPortfolio/" target="_self">
+        <span>← Back to Main Portfolio</span>
+      </a>
+      <a class="link-pill" href="https://github.com/arcstar7" target="_blank" rel="noopener">
+        <span>GitHub</span>
+        <small>github.com/arcstar7</small>
+      </a>
+    </nav>
   </div>
+</header>
+
+<section class="sections" aria-label="Repository sections">
+
+  <article class="card">
+    <a href="https://github.com/arcstar7/VLAN-Audit" target="_blank" rel="noopener">
+      <div class="card-title">VLAN-Audit</div>
+      <div class="card-desc">
+        Automated scripts designed to audit and map VLAN configurations across network infrastructure, ensuring proper segmentation and deployment compliance.
+      </div>
+      <div class="card-cta">View Repository →</div>
+    </a>
+  </article>
+
+  <article class="card">
+    <a href="https://github.com/arcstar7/AzureResourceCleaner" target="_blank" rel="noopener">
+      <div class="card-title">Azure Resource Cleaner</div>
+      <div class="card-desc">
+        Configuration and management tooling designed to streamline the deployment, updates, and resilient operation of autonomous wireless access points.
+      </div>
+      <div class="card-cta">View Repository →</div>
+    </a>
+  </article>
+
+  <article class="card">
+    <a href="https://github.com/arcstar7/DBA-SQL-Perfmon" target="_blank" rel="noopener">
+      <div class="card-title">SQL Monitoring</div>
+      <div class="card-desc">
+       PowerShell-based orchestrator that deploys industry-standard database maintenance routines, verifies backup integrity, and routes critical alerts directly to Microsoft Teams.
+      </div>
+      <div class="card-cta">View Repository →</div>
+    </a>
+  </article>
+
+  <article class="card">
+    <a href="https://github.com/arcstar7/DBA-SQL-Perfmon" target="_blank" rel="noopener">
+      <div class="card-title">Project Name 4</div>
+      <div class="card-desc">
+        Placeholder description for your next automation repository. Update this text to highlight the problem your script or tool solves.
+      </div>
+      <div class="card-cta">View Repository →</div>
+    </a>
+  </article>
+
+</section>
+
+<footer>
+  <div>Steve Schorn · SSPortfolio</div>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/stevenschorn88" target="_blank" rel="noopener">LinkedIn</a> ·
+    <a href="https://github.com/arcstar7" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+
+</div>
 </body>
 </html>
